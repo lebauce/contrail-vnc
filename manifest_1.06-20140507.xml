@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<manifest>
+<remote name="github" fetch="https://github.com/Juniper"/>
+
+<default revision="refs/heads/master" remote="github"/>
+
+<project name="contrail-build" remote="github" path="tools/build" revision="bc09452987d7ecd76e1885531775d3be79bcd415">
+  <copyfile src="SConstruct" dest="SConstruct"/>
+</project>
+<project name="contrail-controller" remote="github" path="controller" revision="e99b3e53b86328a99e7126bff88fac4fd01c2059"/>
+<project name="contrail-vrouter" remote="github" path="vrouter" revision="9820e44454d193bd4fc990014b6252cbd5a767c6"/>
+<project name="contrail-third-party" remote="github" path="third_party" revision="eefd6a6fee9e5ee53d8df4544f72ed715921429d"/>
+<project name="contrail-generateDS" remote="github" path="tools/generateds" revision="1bb3e5630db933d9eb23e96351baca57b92c9552"/>
+<project name="contrail-sandesh" remote="github" path="tools/sandesh" revision="efc06673b9f5b5b133f1db85a49512c5d863e86c"/>
+<project name="contrail-packages" remote="github" path="tools/packages">
+  <copyfile src="packages.make" dest="packages.make"/>
+</project>
+<project name="contrail-nova-vif-driver" remote="github" path="openstack/nova_contrail_vif" revision="776f400de92909b589f6893a08edfdd89a74187d"/>
+<project name="contrail-neutron-plugin" remote="github" path="openstack/neutron_plugin" revision="e6fbec5baca88a395b1fa9d6a95f16342bd6e828"/>
+
+</manifest>
